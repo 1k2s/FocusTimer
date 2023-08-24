@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Focus Timer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="shortcut icon" href="./assets/kichen-timer.mp3" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./JS/script.js" defer type="module"></script>
+    <link rel="shortcut icon" href="./assets/ph_pause-circle.svg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="toggle-mode">
+            <i class="ph-light ph-sun"></i>
+            <i class="ph-light ph-moon"></i>
+        </div>
+
+        <div class="app">
+
+            <div class="container-timer">
+                
+                <div class="time">
+                    <input class="minutes" type="text" maxlength="2" disabled>
+                    <span>:</span>
+                    <input class="seconds" type="text" maxlength="2" disabled>
+                </div>
+    
+                <div class="controls">
+
+                    <button id="toggleRunning" data-action="toggleRunning" class="ph-bold ph-play"></button>
+                    <button id="pause" data-action="pause" class="ph-bold ph-pause"></button>
+                    <button id="set" data-action="set" class="ph-bold ph-clock"></button>
+                    <button id="add" data-action="add" class="ph-bold ph-plus"></button>
+                    <button id="remove" data-action="remove" class="ph-bold ph-minus"></button>
+                    
+                </div>
+    
+            </div>
+    
+            <div class="containerSounds">
+                <button id="rain" class="ph-light ph-cloud-rain"></button>
+                <button id="campfire" class="ph-light ph-campfire"></button>
+                <button id="tree" class="ph-light ph-tree"></button>
+                <button id="storefront" class="ph-light ph-storefront"></button>
+            </div>
+    
+        </div>
+
+    </div>
+
+</body>
+</html>
+                    
+                    
+                    
+                    

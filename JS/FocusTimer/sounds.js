@@ -1,0 +1,5 @@
+export const rain = new Audio('./assets/chuva.wav')
+export const tree = new Audio('./assets/floresta.wav')
+export const campfire = new Audio('./assets/Lareira.wav')
+export const storefront = new Audio('./assets/Cafeteria.wav')
+export const endTimer = new Audio('./assets/kichen-timer.mp3')
