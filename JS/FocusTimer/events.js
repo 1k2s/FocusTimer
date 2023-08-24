@@ -48,7 +48,7 @@ export function countDown () {
     if(minutes < 0) {
 
         if(state.Initial == true) {
-            el.containerTimer.classList.toggle('animationTimer')
+            el.containerTimer.classList.add('animationTimer')
             sounds.endTimer.play()
         }
         
@@ -163,24 +163,46 @@ export function playSounds() {
     
     el.containerSounds.addEventListener('click', (event) => {
     
-      if(!state.isMute) {
-        sounds[state.lastSound].pause()
-        el[state.lastSound].classList.toggle('color-button-sounds-actived')
-        console.log(state.lastSound)
-        state.isMute = true
-      }
-      
-      let sound = event.target.id
-      
-      state.lastSound = sound
-      state.isMute = false
+        let sound = event.target.id
+        
+        // sounds[state.lastSound].pause()
+        // el[state.lastSound].classList.toggle('color-button-sounds-actived')
+       
 
-      el[sound].classList.toggle('color-button-sounds-actived')
-      sounds[sound].play()
-      console.log(state)
-      
+        if(!state.isMute) {
+            sounds[state.lastSound].pause()
+            el[state.lastSound].classList.toggle('color-button-sounds-actived')
+            state.isMute = true
+
+            if(state.lastSound == sound) {
+                return
+            }
+        }
+        
+        state.lastSound = sound
+        state.isMute = false
+        console.log(sound)
+        el[sound].classList.toggle('color-button-sounds-actived')
+        sounds[sound].play()
+        
+        console.log(state)
+         
     })
 }  
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+            
+        
+  
+      
 
         
         

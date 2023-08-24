@@ -7,7 +7,7 @@ export function toggleRunning() {
 
     if(state.isRunning == true)
         return;
-    document.documentElement.classList.toggle('Running')
+    document.documentElement.classList.add('Running')
     state.isRunning = true
     events.countDown()
 
@@ -24,6 +24,7 @@ export function set() {
     pause()
     el.minutes.focus()
     state.Initial = true
+    el.containerTimer.classList.remove('animationTimer')
 }
 
 export function add() {
@@ -42,6 +43,7 @@ export function add() {
     
     events.addTime(5);
     state.Initial = true
+    el.containerTimer.classList.remove('animationTimer')
 
 }
 
